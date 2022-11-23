@@ -66,17 +66,16 @@ Todos as requisições enviadas deverão seguir esses padrões.
 
 - INDEX | get http://localhost:3333
 
-O index retorna todos os valores da tabela Student
+O index retorna todos os valores da tabela Student:
 
-(IMAGEM AQUI)
+![index-success](https://user-images.githubusercontent.com/107213601/203664364-43d28e02-2519-412c-a8d4-1f8d82fb250c.png)
 
 - SHOW | get http://localhost:3333/:matriculation
 
 O método show busca um único estudante baseado no número da matrícula enviado  por parâmetro. Caso a consulta seja um sucesso, retorna um código HTTP 200 e o estudante, caso ocorra algo errado, levanta um código 404 e uma mensagem de erro:
 
-(IMAGEM SUCESSO AQUI)
-
-(IMAGEM ERRO AQUI)
+![show-success](https://user-images.githubusercontent.com/107213601/203664345-4a52d16f-a5a7-491b-abe9-da844c1da9ce.png)
+![show-error](https://user-images.githubusercontent.com/107213601/203664350-8a64ca80-868e-414d-8850-6364c72b4664.png)
 
 - STORE | post http://localhost:3333
 
@@ -94,9 +93,8 @@ O método store salva um novo dado na tabela estudante. Todos os campos são env
 
 Caso a requisição estiver correta e passar por todos os validadores, um código 201 é retornado junto ao novo estudante, caso algo falhe, um erro 400 é levantado juntamente a uma mensagem:
 
-(IMAGEM DE SUCESSO AQUI)
-
-(IMAGEM DE ERRO AQUI)
+![store-success](https://user-images.githubusercontent.com/107213601/203664327-4aa4cdc8-d575-4196-a4d4-0c81012fbbbb.png)
+![store-error](https://user-images.githubusercontent.com/107213601/203664333-97c8c0ef-8627-4b77-b1ff-a72bee541a94.png)
 
 - Update| put http://localhost:3333/:matricula
 
@@ -113,17 +111,15 @@ O método update altera um dado existente da tabela estudante. No parâmetro vai
 
 Caso a requisição estiver correta e passar por todos os validadores, um código 202 é retornado junto ao novo estudante, caso algo falhe, um erro 400 é levantado juntamente a uma mensagem:
 
-(IMAGEM DE SUCESSO AQUI)
-
-(IMAGEM DE ERRO AQUI)
+![update-success](https://user-images.githubusercontent.com/107213601/203664302-ea16d9b3-3f04-40ff-8030-3f08b1b014d2.png)
+![update-error](https://user-images.githubusercontent.com/107213601/203664314-a2e2320d-00cd-452f-861c-8317ad67090e.png)
 
 - DELETE| delete http://localhost:3333/:matriculation
 
 O método delete deleta um estudante baseado no número da matrícula enviado por parâmetro. Caso a consulta seja um sucesso, retorna um código HTTP 202 e o estudante, caso ocorra algo errado, levanta um código 400 e uma mensagem de erro:
 
-(IMAGEM SUCESSO AQUI)
-
-(IMAGEM ERRO AQUI)
+![delete-success](https://user-images.githubusercontent.com/107213601/203664272-639f3ed4-d464-4bc0-910f-233bca1bc774.png)
+![delete-error](https://user-images.githubusercontent.com/107213601/203664280-9e8c760f-6e95-4895-bea9-d0d8e3d8fc29.png)
 
 ## TEST COVERAGE
 
@@ -141,4 +137,4 @@ NÃO EXCLUIR AS SEGUINTES MATRÍCULAS:
 
 6. 139504
 
-(IMAGEM AQUI)
+![error-coverage](https://user-images.githubusercontent.com/107213601/203664250-847e9281-60d1-4b2c-8bd8-9dc4ade4d952.png)
